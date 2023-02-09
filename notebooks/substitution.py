@@ -18,8 +18,7 @@ def substitution():
                 a_list += chr(ascii[x])
             for x in range(0,26):
                 keylookup.update({a_list[x]:key[x].upper()})
-            for x in range(26, 52):
-                keylookup.update({a_list[x]:key[x-26].lower()})
+                keylookup.update({a_list[x+26]:key[x].lower()})
             ciphertext = ""
             for x in range(len(plaintext)):
                 if ord(plaintext[x]) in [*range(65,91),*range(97,123)]:
