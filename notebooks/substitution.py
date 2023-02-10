@@ -9,9 +9,7 @@ def substitution():
         if len(cipher) != 26 or ord(key[x]) not in [*range(65,91),*range(97,123)]:
             check = check + 1
         if len(key) == 26 and check == 0:
-            keylookup = {
-
-            }
+            keylookup = dict()
             ascii = [*range(65,91),*range(97,123)]
             a_list = []
             for x in range(52):
